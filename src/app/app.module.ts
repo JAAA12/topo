@@ -10,6 +10,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { ErrorComponent } from './error/error.component';
+import { DataService } from './DataService';
+import { RegistroService } from './RegistroService';
 
 
 const appRoutes:Routes=[
@@ -38,7 +40,7 @@ const appRoutes:Routes=[
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataService, RegistroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
